@@ -11,6 +11,7 @@ model Projects {
   id           Int      @id @default(autoincrement())
   title        String 
   desc         Json 
+  features     Json?
   technologies String
   codeLink     String?
   demoLink     String?

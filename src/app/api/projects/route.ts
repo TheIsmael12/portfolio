@@ -7,6 +7,12 @@ type ProjectTranslations = {
 
 }
 
+type ProjectFeatures = {
+
+    [key: string]: string[]
+
+}
+
 export async function GET(req: Request) {
 
     try {
@@ -19,13 +25,18 @@ export async function GET(req: Request) {
         const projectsWithLocalizedData = projects.map((project) => {
 
             const desc = project.desc as ProjectTranslations
+            const features = project.features as ProjectFeatures | null
 
             return {
                 ...project,
                 desc: desc[locale] || desc['en'],
+                features: features ? features[locale] || features['en'] || [] : [],
             }
 
         })
+
+        // Los proyectos con funcionalidades destacadas se muestran primero
+        projectsWithLocalizedData.sort((a, b) => b.features.length - a.features.length)
 
         return NextResponse.json(projectsWithLocalizedData, { status: 200 })
 
@@ -43,7 +54,7 @@ export async function POST(req: Request) {
 
         const body = await req.json()
 
-        const { id, title, desc, codeLink, demoLink, technologies } = body
+        const { id, title, desc, features, codeLink, demoLink, technologies } = body
 
         if (!title) {
             return NextResponse.json({ error: 'Title is required' }, { status: 400 })
@@ -55,6 +66,7 @@ export async function POST(req: Request) {
                 id,
                 title,
                 desc,
+                features,
                 codeLink,
                 demoLink,
                 technologies,

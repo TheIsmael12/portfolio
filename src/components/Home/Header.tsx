@@ -34,7 +34,7 @@ const Header = () => {
                         Ismael Benabdellah
                     </h1>
 
-                    <p className='lg:w-[390px] text-balance lg:text-justify'>
+                    <p className='lg:w-[460px] text-balance lg:text-justify'>
                         <span className='font-semibold text-colorLight dark:text-colorDark'>{t('part1')}</span> {t('part2')} <span className='font-semibold text-colorLight dark:text-colorDark'>{t('part3')}</span> {t('part4')} {t('part5')}
                     </p>
 

@@ -14,7 +14,7 @@ export async function GET(req: Request) {
         const url = new URL(req.url)
         const locale = url.searchParams.get('locale') || 'en'
 
-        const careers = await prisma.careers.findMany()
+        const careers = await prisma.careers.findMany({ orderBy: { startDate: 'desc' } })
 
 
         const careersWithLocalizedData = careers.map(career => {

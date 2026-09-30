@@ -6,15 +6,15 @@
         "decline": "Rechazar"
     },
     "Header": {
-        "part1": "+3 años",
-        "part2": "de experiencia como",
-        "part3": "Desarrollador Web Full Stack",
-        "part4": "en Madrid, España.",
-        "part5": "Especializado en el desarrollo de aplicaciones web con React."
+        "part1": "+4 años",
+        "part2": "de experiencia en tecnología, actualmente como",
+        "part3": "Frontend Tech Lead",
+        "part4": "en Enova IT (Madrid, España).",
+        "part5": "Lidero equipos y proyectos frontend con React, Next.js y TypeScript, y participo en presupuestos, modelo de negocio y reuniones con clientes."
     },
     "About": {
         "title": "Sobre Mí",
-        "desc": "Desarrollador Frontend con experiencia profesional y freelance en la creación de aplicaciones web modernas y escalables. Especializado en React, Next.js y TypeScript, con capacidad para trabajar de extremo a extremo gracias a conocimientos en backend y sistemas."
+        "desc": "Frontend Tech Lead en Enova IT, donde lidero equipos y proyectos en el ámbito frontend: defino la arquitectura, reviso código y acompaño al equipo en el día a día. Además, participo en la parte de negocio de las aplicaciones: elaboración de presupuestos, definición del modelo de negocio y reuniones con clientes para convertir sus necesidades en producto. Especializado en React, Next.js y TypeScript, con capacidad para trabajar de extremo a extremo gracias a conocimientos en backend y sistemas."
     },
     "Careers": {
         "title": "Trayectoria Profesional",
