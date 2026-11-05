@@ -1,41 +1,40 @@
-import Link from 'next/link'
-import Image from 'next/image'
+import { Metadata } from 'next'
 
-export default async function NotFound() {
+import ThemeWrapper from '@/providers/ThemeProvider'
+import Navbar from '@/components/Static/Navbar'
+import NotFoundView from '@/components/NotFound/NotFoundView'
+import { notFoundMetadata } from '@/lib/notFoundMetadata'
+
+// Reserva para lo que no llega a app/[locale] (rutas con un idioma que no existe o fuera del
+// middleware). El layout raíz no pinta <html>, así que lo monta esta página, en el idioma por defecto.
+const DEFAULT_LOCALE = 'es'
+
+export async function generateMetadata(): Promise<Metadata> {
+
+    return notFoundMetadata(DEFAULT_LOCALE)
+
+}
+
+export default function GlobalNotFound() {
 
     return (
 
-        <div className='h-[600px] flex justify-center items-center text-center'>
+        <html lang={DEFAULT_LOCALE}>
 
-            <div className='px-5 space-y-5'>
+            <body className='bg-white dark:bg-neutral-900'>
 
-                <Image className='mx-auto'
-                    src='/assets/images/assets/error404.webp'
-                    width={1080} height={720}
-                    alt='Error404'
-                    title='Error404'
-                    priority
-                />
+                <ThemeWrapper>
 
-                <h1 className='text-6xl font-bold'>
-                    Error <span className='text-colorLight dark:text-colorDark'>404</span>
-                </h1>
+                    <Navbar />
+                    <main className='px-5'>
+                        <NotFoundView locale={DEFAULT_LOCALE} />
+                    </main>
 
-                <p className='text-xl md:text-2xl'>
-                    ¡Ups! la pagina <span className='text-colorLight dark:text-colorDark'> no ha sido encontrada</span>.
-                </p>
+                </ThemeWrapper>
 
-                <div>
-                    <Link href='/' title='Home'>
-                        <button className='py-2 px-5 rounded-full border'>
-                            Volver al incio.
-                        </button>
-                    </Link>
-                </div>
+            </body>
 
-            </div>
-
-        </div>
+        </html>
 
     )
 

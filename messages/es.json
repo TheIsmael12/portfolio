@@ -34,5 +34,15 @@
     },
     "Skills": {
         "title": "Habilidades"
+    },
+    "NotFound": {
+        "metaTitle": "Página no encontrada - Ismael Benabdellah",
+        "metaDescription": "La página que buscas no existe o ha cambiado de dirección. Vuelve al portfolio de Ismael Benabdellah para ver sus proyectos y su trayectoria.",
+        "title": "Página no encontrada",
+        "description": "La página que buscas no existe o ha cambiado de dirección. Puedes volver al inicio, echar un vistazo a mis proyectos o escribirme directamente.",
+        "home": "Volver al inicio",
+        "projects": "Ver proyectos",
+        "contact": "¿Buscabas algo en concreto? Escríbeme:",
+        "email": "Correo"
     }
 }
