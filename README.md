@@ -9,6 +9,7 @@ Portfolio personal de **Ismael Benabdellah**, desarrollador full stack. Una sola
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-06B6D4?logo=tailwindcss&logoColor=white)
 ![Prisma](https://img.shields.io/badge/Prisma-6-2D3748?logo=prisma)
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white)
+![Visitas](https://visitor-badge.laobi.icu/badge?page_id=TheIsmael12.portfolio&left_text=visitas&right_color=%232f81f7)
 
 ---
 
