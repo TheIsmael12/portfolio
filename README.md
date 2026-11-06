@@ -12,6 +12,12 @@ Portfolio personal de **Ismael Benabdellah**, desarrollador full stack. Una sola
 
 ---
 
+## Capturas
+
+| Tema claro | Tema oscuro |
+|---|---|
+| ![Tema claro](docs/capturas/claro.png) | ![Tema oscuro](docs/capturas/oscuro.png) |
+
 ## Qué incluye
 
 - **Secciones:** cabecera, sobre mí, trayectoria profesional, formación, proyectos y habilidades.
@@ -40,7 +46,7 @@ git clone https://github.com/TheIsmael12/portfolio.git
 cd portfolio
 npm install
 
-cp .env-example .env          # y rellena DATABASE_URL
+cp .env.example .env          # y rellena DATABASE_URL
 npx prisma db push            # crea las tablas
 npx prisma generate
 

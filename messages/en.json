@@ -2,6 +2,7 @@
     "Cookies": {
         "title": "Cookies Policy",
         "desc": "We use cookies to improve your browsing experience and to analyze our website traffic. You can accept or decline the use of cookies at any time.",
+        "cookies": "cookie policy",
         "accept": "Accept",
         "decline": "Decline"
     },

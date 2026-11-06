@@ -20,7 +20,7 @@ const CareerPathList = () => {
             .then((res) => res.json())
             .then((data) => {
 
-                setCareers(data)
+                setCareers(Array.isArray(data) ? (data as never[]) : [])
                 setLoading(false)
 
             })

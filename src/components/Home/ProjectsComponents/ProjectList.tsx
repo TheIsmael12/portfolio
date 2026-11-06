@@ -20,13 +20,13 @@ const ProjectList = () => {
             .then((res) => res.json())
             .then((data) => {
 
-                setProjects(data)
+                setProjects(Array.isArray(data) ? (data as never[]) : [])
                 setLoading(false)
 
             })
             .catch((err) => {
 
-                console.error('Error fetching careers:', err)
+                console.error('Error fetching projects:', err)
                 setLoading(false)
 
             })

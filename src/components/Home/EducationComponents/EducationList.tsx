@@ -20,7 +20,7 @@ const EducationList = () => {
             .then((res) => res.json())
             .then((data) => {
 
-                setEducations(data)
+                setEducations(Array.isArray(data) ? (data as never[]) : [])
                 setLoading(false)
 
             })
